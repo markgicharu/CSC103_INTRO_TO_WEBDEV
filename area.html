@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+         <script>
+            function getArea(){ //define the function
+              var radius = document.getElementById("radius").value;//define the variable and assign a value to it
+              var area= 3.142*radius*radius;//define the variable and assign a value
+               //conditional statement begins here
+               //if radius is null alert
+               if (radius== null || radius==""){
+                        alert("Please enter the radius of the circle");
+                    }
+                else {//if radius is computed alert
+                        alert(("the area of the circle is ") + (area)) ;
+                    }
+    }
+    </script>
+    <!--this is the texbox below-->
+    <p>Please enter the radius Below</p>
+    <input type="text" id="radius">
+    <button type="button" id="area" onClick='getArea()'>Area</button>
+    
+    </body>
+</html>
