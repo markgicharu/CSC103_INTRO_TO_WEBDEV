@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<head>
+    <title>get the area of a circle</title>
+</head>
+<body>
+    <script>
+	function getArea(){
+	
+		var radius;
+        var area;
+        radius = document.getElementById('radius').value;
+		 
+        
+        <!--conditional statement begins here-->
+        
+            
+                if(!radius)
+                {
+                    document.getElementById('errorMessage').innerHTML = ("please enter a value");
+                }
+                else if (isNaN(radius))
+                {
+                    document.getElementById('errorMessage').innerHTML = ("please enter a number for example 1");
+                }
+                else 
+                {
+					area = 3.142 * radius * radius;
+                    document.getElementById('errorMessage').innerHTML = ("the area of the circle is " + area);
+				}
+	}
+        
+               
+    </script>
+    <p>Please enter the radius below </p>
+    <input type="text" id="radius" onclick="document.getElementById('radius').value=''"/>
+    <button type="button" id="area" onclick=getArea()>get area </button>
+    <p id="errorMessage"></p>
+    
+
+</body>
+</html>
